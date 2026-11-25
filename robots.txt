@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /_src/
+Disallow: /tools/
+Sitemap: https://alhikmahinstitute.online/sitemap.xml

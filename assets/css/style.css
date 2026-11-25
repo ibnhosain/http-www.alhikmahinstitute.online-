@@ -2698,3 +2698,94 @@ ul {
 .table thead th.num {
   white-space: normal;
 }
+
+/* Google Drive-এর লিংক (হোমের স্লাইডারের নিচে ও গ্যালারির উপরে) */
+.showcase-more {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.drive-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+  padding: 20px 24px;
+  border-radius: var(--r-lg);
+  color: #fff;
+  background: linear-gradient(135deg, var(--royal-700), var(--royal-900));
+  box-shadow: var(--shadow-2);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.drive-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-3);
+}
+
+.drive-icon {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  color: var(--royal-950);
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+}
+
+.drive-icon .icon {
+  width: 28px;
+  height: 28px;
+}
+
+.drive-text {
+  flex: 1;
+  display: grid;
+  gap: 4px;
+}
+
+.drive-text strong {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+}
+
+.drive-text span {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+}
+
+.drive-go {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--gold-400);
+}
+
+@media (max-width: 600px) {
+  .drive-card {
+    flex-wrap: wrap;
+    padding: 18px;
+  }
+
+  .drive-go {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.showcase-more .btn {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}

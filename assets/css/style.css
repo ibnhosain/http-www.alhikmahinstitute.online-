@@ -3127,3 +3127,59 @@ ul {
     transition: none;
   }
 }
+
+/* ---------- সাধারণ জিজ্ঞাসা (হোম) — build.py এখান থেকেই FAQPage JSON-LD বানায় ---------- */
+.faq {
+  display: grid;
+  gap: 12px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-1);
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 16px 52px 16px 20px;
+  position: relative;
+  font-family: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+  font-weight: 600;
+  font-size: 1.06rem;
+  color: var(--royal-700);
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--surface-2);
+  color: var(--gold-600, var(--gold-500));
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.faq-item[open] summary::after {
+  content: '−';
+}
+.faq-item summary:focus-visible {
+  outline: 3px solid var(--gold-500);
+  outline-offset: 2px;
+  border-radius: var(--r-md);
+}
+.faq-item p {
+  margin: 0;
+  padding: 0 20px 18px;
+  color: var(--ink-2);
+}
